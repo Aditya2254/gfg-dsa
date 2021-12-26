@@ -7,7 +7,10 @@ bool ispalindrome(string s,int b,int e){
     return ((s[b] == s[e]) && ispalindrome(s,b+1,e-1));
 }
 int main(){
-
+#ifndef ONLINE_JUDGE
+        freopen("input.txt","r",stdin);
+        freopen("output.txt","w",stdout);
+    #endif
     string s;
     cin>>s;
     int l=s.length();
