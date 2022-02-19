@@ -1,3 +1,5 @@
+//this just prints the subsets, it's not further usable.
+//there is another program named generatingsubsetsusingvector,visit that.
 #include<bits/stdc++.h>
 using namespace std;
 void subsets(string s,string curr,int i){
