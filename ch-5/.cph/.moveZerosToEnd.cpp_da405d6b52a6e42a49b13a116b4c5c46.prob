@@ -1,0 +1,1 @@
+{"name":"Local: moveZerosToEnd","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\moveZerosToEnd.cpp","tests":[{"id":1645809475556,"input":"6\n10 8 0 0 12 0","output":"10 8 12 0 0 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\moveZerosToEnd.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: leftRotateByD","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\leftRotateByD.cpp","tests":[{"id":1645813015990,"input":"5 2\n1 2 3 4 5","output":"34512"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\leftRotateByD.cpp","group":"local","local":true}
