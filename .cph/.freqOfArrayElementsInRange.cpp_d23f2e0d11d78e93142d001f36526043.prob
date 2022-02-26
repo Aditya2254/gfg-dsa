@@ -1,0 +1,1 @@
+{"name":"Local: freqOfArrayElementsInRange","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\freqOfArrayElementsInRange.cpp","tests":[{"id":1645864255874,"input":"5\n3 2 2 2 1\n3","output":"1 3 1 0 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\freqOfArrayElementsInRange.cpp","group":"local","local":true}
