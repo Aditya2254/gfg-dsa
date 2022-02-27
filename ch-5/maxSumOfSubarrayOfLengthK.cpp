@@ -5,7 +5,7 @@ int maximumsumofsubarroflenk(int arr[],int n,int k){
     if (k>n)
     {
         cout<<"invalid input "<<endl;
-        return -99;
+        return 0;
     }
     
     for (int j = 0; j < k; j++)
