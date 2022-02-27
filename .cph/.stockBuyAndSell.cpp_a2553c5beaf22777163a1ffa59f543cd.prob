@@ -1,0 +1,1 @@
+{"name":"Local: stockBuyAndSell","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\stockBuyAndSell.cpp","tests":[{"id":1645891109425,"input":"5\n1 5 3 8 12","output":"13"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\stockBuyAndSell.cpp","group":"local","local":true}
