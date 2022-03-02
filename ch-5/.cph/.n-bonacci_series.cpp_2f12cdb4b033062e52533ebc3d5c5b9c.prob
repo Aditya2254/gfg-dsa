@@ -1,0 +1,1 @@
+{"name":"Local: n-bonacci_series","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\n-bonacci_series.cpp","tests":[{"id":1646211372563,"input":"","output":"0 0 0 0 1 1 2 4 8 16 31 61 120 236 464"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\n-bonacci_series.cpp","group":"local","local":true}
