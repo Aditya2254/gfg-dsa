@@ -18,6 +18,7 @@ int getSum(int brr[],int l,int r){
     }
 }
 int findEqPoint(int arr[],int brr[],int n){
+    computePrefSum(arr,n,brr);
     if (getSum(brr,1,n-1)==0)
     {
         return 0;
@@ -35,6 +36,24 @@ int findEqPoint(int arr[],int brr[],int n){
     }
     return -1;
 }
+int eqPoint(int arr[],int n){
+    int sum=0;
+    for (int i = 0; i < n; i++)
+    {
+        sum+=arr[i];
+    }
+    int l_sum=0;
+    for (int i = 0; i < n; i++)
+    {
+        if (l_sum == sum - arr[i])
+        {
+            return i;
+        }
+        l_sum += arr[i];
+        sum -= arr[i];
+    }
+    return -1;
+}
 int main(){
     int n;
     cin>>n;
@@ -43,6 +62,6 @@ int main(){
     {
         cin>>arr[i];
     }
-    computePrefSum(arr,n,brr);
-    cout<<findEqPoint(arr,brr,n);
+    cout<<findEqPoint(arr,brr,n);               //this takes O(n) extra auxiliary space
+    // cout<<eqPoint(arr,n);                    //this takes O(1) extra ausiliary space
 }
