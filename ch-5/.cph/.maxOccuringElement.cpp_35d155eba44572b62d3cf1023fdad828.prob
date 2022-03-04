@@ -1,0 +1,1 @@
+{"name":"Local: maxOccuringElement","url":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\maxOccuringElement.cpp","tests":[{"id":1646340613574,"input":"3\n1 2 3\n3 5 7","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Administrator\\Documents\\gfg dsa\\ch-5\\maxOccuringElement.cpp","group":"local","local":true}
