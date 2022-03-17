@@ -9,7 +9,7 @@ int gcd(int a,int b)
 int main()
 {
 	int m,n;
-	cout<<"Enter the numbers: ";
+	// cout<<"Enter the numbers: ";
 	cin>>m>>n;
 	cout<<gcd(m,n);
 }
