@@ -83,6 +83,27 @@ node *insertAtPos(node *head,int pos,int value){
 	return head;
 }
 
+int search(node *head,int value){
+	int pos=1;
+	node *ptr=head;
+	while(ptr!= NULL){
+		if(ptr->data == value){
+			return pos;
+		}
+		pos++;
+		ptr=ptr->next;
+	}
+	return -1;
+}
+
+int searchRecursive(node *head, int value,int count=1){
+	if(head == NULL)
+		return -1;
+	if(head->data == value)
+		return count;
+	return searchRecursive(head->next,value,count+=1);
+}
+
 int main(){
 #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
@@ -99,6 +120,8 @@ int main(){
     head=insertEnd(head,50);
     head=insertAtPos(head,1,25);
 
+    cout<<search(head,15)<<endl;
+    cout<<searchRecursive(head,25)<<endl;
     display(head);
 
 }
