@@ -24,8 +24,8 @@ node* reverse(node *head){
 	if(head==NULL || head->next == NULL)
 		return head;
 	node *temp = NULL;
-	node *curr = head;
-	while(curr != NULL){
+	// node *curr = head;
+	while(head->next != NULL){
 		temp = head->next;
 		head->next = head->prev;
 		head->prev = temp;
