@@ -12,6 +12,8 @@ struct node{
 };
 
 void display(node *head){
+	if(head == NULL)
+		return;
 	while(head != NULL){
 		cout<<head->data<<" ";
 		head=head->next;
