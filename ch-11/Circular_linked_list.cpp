@@ -92,6 +92,24 @@ node* deleteHead(node *head){			//o(1) time complexity
 	return head;						//return same head with data of second node.
 }
 
+node* deleteKthNode(node *head, int k){
+	if(head == NULL)
+		return NULL;
+	if(k==1)
+		return deleteHead(head);
+	node *ptr = head;
+	for(int i=1;i<k-1;i++){
+		// if(ptr = head)
+		// 	return head;
+		ptr=ptr->next;
+	}
+	if(ptr->next == head)
+		return deleteHead(head);
+	node *temp = ptr->next;
+	ptr->next = ptr->next->next;
+	delete temp;
+	return head;
+}
 int main(){
 #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
@@ -110,6 +128,8 @@ int main(){
     head = insertEnd(head,35);
     display(head);
     head = deleteHead(head);
+    display(head);
+    head = deleteKthNode(head,3);
     display(head);
 
 }
