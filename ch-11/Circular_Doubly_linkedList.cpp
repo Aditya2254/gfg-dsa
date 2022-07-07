@@ -27,13 +27,29 @@ node* insertHead(node *head,int value){
 	return temp;
 }
 
+node* insertEnd(node *head,int value){
+	node *temp = new node(value);
+	if(head == NULL){
+		temp->next = temp;
+		temp->prev = temp;
+		return temp;
+	}
+	temp->prev = head->prev;
+	temp->next = head;
+	head->prev->next = temp;
+	head->prev = temp;
+	return head;
+}
+
 void display(node *head){
+	if(head == NULL)
+		return;
 	node *ptr = head;
 	do{
 		cout<<ptr->data<<" ";
 		ptr=ptr->next;
 	}
-	while(ptr->next != head);
+	while(ptr != head);
 	cout<<endl;
 }
 
@@ -49,7 +65,7 @@ int main(){
     head = insertHead(head,20);
 	head = insertHead(head,30);
     head = insertHead(head,40);
-    head = insertHead(head,50);
-    head = insertHead(head,60);
+    head = insertEnd(head,50);
+    head = insertEnd(head,60);
     display(head);
 }

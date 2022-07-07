@@ -15,6 +15,7 @@ void display(node *head){
 		cout<<head->data<<" ";
 		head=head->next;
 	}
+	cout<<endl;
 }
 
 node* insertBegin(node *head,int value){
@@ -104,6 +105,21 @@ int searchRecursive(node *head, int value,int count=1){
 	return searchRecursive(head->next,value,count+=1);
 }
 
+node* reverse(node *head){										//time complexity=o(n);
+	if(head == NULL || head->next == NULL)
+		return head;
+	node *ptr = head;
+	node *p=NULL;
+	node *n=NULL;
+	while(ptr != NULL){
+		n = ptr->next;
+		ptr->next =p;
+		p=ptr;
+		ptr=n; 
+	}
+	return p;
+}
+
 int main(){
 #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
@@ -122,6 +138,8 @@ int main(){
 
     cout<<search(head,15)<<endl;
     cout<<searchRecursive(head,25)<<endl;
+    display(head);
+    head = reverse(head);
     display(head);
 
 }

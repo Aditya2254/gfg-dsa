@@ -16,20 +16,20 @@ struct node{
 	}
 };
 
-node* insertBegin(node *head,int value){					//o(n) time complexity
-	node *temp  = new node(value);
-	if(head == NULL){
-		temp->next=temp;
-		return temp;
-	}
-	node *ptr = head;
-	while(ptr->next != head){								//traverse till end and insert there
-		ptr=ptr->next;
-	}
-	ptr->next = temp;
-	temp->next = head;
-	return temp;											//return the new node as head
-}
+// node* insertBegin(node *head,int value){					//o(n) time complexity
+// 	node *temp  = new node(value);
+// 	if(head == NULL){
+// 		temp->next=temp;
+// 		return temp;
+// 	}
+// 	node *ptr = head;
+// 	while(ptr->next != head){								//traverse till end and insert there
+// 		ptr=ptr->next;
+// 	}
+// 	ptr->next = temp;
+// 	temp->next = head;
+// 	return temp;											//return the new node as head
+// }
 
 node* insertBeginoptimised(node *head,int value){			//o(1) time complexity
 	node *temp = new node(value);
@@ -57,15 +57,15 @@ node* insertEnd(node *head,int value){						//o(1) time complexity
 	return temp;											//return the new node holding old head data.
 }
 
-void displayFor(node *head){
-	if(head == NULL)
-		return;
-	cout<<head->data<<" ";
-	for(node *p = head->next;p != head;p=p->next){
-		cout<<p->data<<" ";
-	}
-	cout<<endl;
-}
+// void displayFor(node *head){
+// 	if(head == NULL)
+// 		return;
+// 	cout<<head->data<<" ";
+// 	for(node *p = head->next;p != head;p=p->next){
+// 		cout<<p->data<<" ";
+// 	}
+// 	cout<<endl;
+// }
 
 void display(node *head){				//better one
 	if(head == NULL)
@@ -122,7 +122,7 @@ int main(){
     head->next->next = new node(30);
     head->next->next->next = head;
 
-    displayFor(head);
+    display(head);
     head=insertBeginoptimised(head,5);
     display(head);
     head = insertEnd(head,35);
