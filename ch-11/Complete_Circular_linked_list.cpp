@@ -31,7 +31,7 @@ struct node{
 // 	return temp;											//return the new node as head
 // }
 
-node* insertBeginoptimised(node *head,int value){			//o(1) time complexity
+node* insertBegin(node *head,int value){					//o(1) time complexity
 	node *temp = new node(value);
 	if(head == NULL){
 		temp->next = temp;
@@ -84,7 +84,6 @@ node* deleteHead(node *head){			//o(1) time complexity
 	if(head->next == head){
 			delete head;
 			return NULL;}
-	int a;
 	head->data = head->next->data;		//copying data of the second node in head;
 	node *temp = head->next;
 	head->next=head->next->next;		//bypassing second node
@@ -92,44 +91,29 @@ node* deleteHead(node *head){			//o(1) time complexity
 	return head;						//return same head with data of second node.
 }
 
-node* deleteKthNode(node *head, int k){
-	if(head == NULL)
-		return NULL;
-	if(k==1)
-		return deleteHead(head);
-	node *ptr = head;
-	for(int i=1;i<k-1;i++){
-		// if(ptr = head)
-		// 	return head;
-		ptr=ptr->next;
-	}
-	if(ptr->next == head)
-		return deleteHead(head);
-	node *temp = ptr->next;
-	ptr->next = ptr->next->next;
-	delete temp;
-	return head;
-}
 int main(){
 #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
 #endif
-    // node *head = NULL;
-    node *head = new node(10);
-    // head->next = head;
-    head->next = new node(20);
-    head->next->next = new node(30);
-    head->next->next->next = head;
+    node *head = NULL;
+    head = insertEnd(head,10);
+    head = insertEnd(head,20);
+    head = insertEnd(head,30);
+    head = insertEnd(head,40);
+    head = insertEnd(head,50);
+    // node *head = new node(10);
+    // // head->next = head;
+    // head->next = new node(20);
+    // head->next->next = new node(30);
+    // head->next->next->next = head;
 
     display(head);
-    head=insertBeginoptimised(head,5);
+    head=insertBegin(head,5);
     display(head);
     head = insertEnd(head,35);
     display(head);
     head = deleteHead(head);
-    display(head);
-    head = deleteKthNode(head,3);
     display(head);
 
 }
