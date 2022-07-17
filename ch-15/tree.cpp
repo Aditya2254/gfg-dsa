@@ -66,27 +66,24 @@ void levelOrderTraversal(node* root)
 		return;
 	queue<node*> q;
 	q.push(root);
-	q.push(NULL);
 	while(!q.empty())
 	{
-		node* temp=q.front();
-		q.pop();
-	if(temp!=NULL){
-		counter++;
-		sum=sum+temp->data;
-		cout<<temp->data<<" ";
-		if(temp->left)
-			q.push(temp->left);
-		if(temp->right)
-			q.push(temp->right);
-	}
-	else if(!q.empty())
-		q.push(NULL),
-		height++;
+		int n=q.size();
+		for(int i=1;i<=n;i++)
+		{
+			node* curr=q.front();
+			counter++;
+			sum+=curr->data;
+			q.pop();
+			if(curr->left)
+				q.push(curr->left);
+			if(curr->right)
+				q.push(curr->right);
+		}
 	}
 	cout<<endl<<counter<<" ";
 	cout<<endl<<sum<<" ";
-	cout<<height<<endl;
+	//cout<<height<<endl;
 }
 
 int height(node *root){
@@ -137,9 +134,9 @@ int main(){
     	cout<<"Not found";
     cout<<endl;
     levelOrderTraversal(root);
-    cout<<height(root)<<endl;
-    cout<<sum(root);
-    cout<<endl<<count(root);
+    //cout<<height(root)<<endl;
+    //cout<<sum(root);
+   // cout<<endl<<count(root);
     return 0;
 
 
