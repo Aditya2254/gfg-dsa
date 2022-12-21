@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool ispalindrome(string s,int b,int e){
-    if(b >= e){
+bool ispalindrome(string s,int i=0){
+    if(i >= s.size()/2){
         return true;
     }
-    return ((s[b] == s[e]) && ispalindrome(s,b+1,e-1));
+    return ((s[i] == s[s.size()-1-i]) && ispalindrome(s,i+1));
 }
 int main(){
 #ifndef ONLINE_JUDGE
@@ -14,5 +14,5 @@ int main(){
     string s;
     cin>>s;
     int l=s.length();
-    cout<<ispalindrome(s,0,l-1);
+    cout<<ispalindrome(s);
 }
