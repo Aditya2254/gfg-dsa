@@ -11,7 +11,7 @@ void subsets(string s,string curr,int i){
 	subsets(s,curr+s[i],i+1);
 }
 int main(){
-	string s="ABC";
+	string s="ABCD";
 	subsets(s,"",0);
 	return 0;
 }
