@@ -45,7 +45,7 @@ freopen("input.txt","r",stdin);
 freopen("output.txt","w",stdout);
 #endif
    
-   	int n = 3, arr[]= {1,2,1}, sum = 2;
+   	int n = 3, arr[]= {10,25,15}, sum = 25;
    	
    	cout<<"No. of subsequences: "<<countSubsets(arr, n, sum)<<endl;
 

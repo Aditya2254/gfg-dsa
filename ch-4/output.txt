@@ -1,3 +1,3 @@
 No. of subsequences: 2
-All subsequences: [1 1 ][2 ]
-First subsequence: [1 1 ]
+All subsequences: [15 10 ][25 ]
+First subsequence: [15 10 ]
